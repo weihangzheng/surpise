@@ -51,11 +51,24 @@
         .active {
             background-color: #717171;
         }
+        #play-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
 <h1>Happy Birthday!</h1>
+
+<audio id="background-music" loop>
+    <source src="audio/song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="play-button">Play Music</button>
 
 <div class="slideshow-container">
     <!-- Add your slides here -->
@@ -78,6 +91,10 @@
 </div>
 
 <script>
+    document.getElementById('play-button').addEventListener('click', function() {
+        document.getElementById('background-music').play();
+    });
+
     let slideIndex = 0;
     showSlides();
 

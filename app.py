@@ -6,6 +6,10 @@ app = Flask(__name__)
 def serve_index():
     return send_from_directory('', 'index.html')
 
+@app.route('/audio/<path:filename>')
+def serve_audio(filename):
+    return send_from_directory('audio', filename)
+
 @app.route('/images/<path:filename>')
 def serve_image(filename):
     return send_from_directory('images', filename)

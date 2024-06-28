@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <title>Happy Birthday! Click play music! </title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background: url('images/background.jpg') no-repeat center center fixed;
             background-size: cover;
+            margin: 0;
+        }
+        .title-container {
+            background-color: green;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        h1 {
+            color: blue;
             margin: 0;
         }
         .slideshow-container {
@@ -62,7 +73,9 @@
 </head>
 <body>
 
-<h1>Happy Birthday!</h1>
+<div class="title-container">
+    <h1>Happy Birthday! Click play music!</h1>
+</div>
 
 <audio id="background-music" loop>
     <source src="audio/song.mp3" type="audio/mpeg">
